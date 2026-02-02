@@ -1,0 +1,18 @@
+model = "gpt-5.2-codex"
+model_reasoning_effort = "xhigh"
+
+[features]
+web_search_request=true
+unified_exec = true
+steer = true
+collaboration_modes = true
+
+[mcp_servers.context7]
+command = "npx"
+args = ["--yes", "@upstash/context7-mcp"]
+description = "Context7 MCP pulls up-to-date, version-specific documentation and code examples straight from the source — and places them directly into your prompt."
+
+[mcp_servers.serena]
+command = "uvx"
+args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "codex"]
+description = "An advanced code intelligence MCP server providing symbolic code analysis, navigation, and manipulation capabilities including symbol search, reference finding, pattern matching, and code structure understanding for efficient codebase exploration and refactoring."
