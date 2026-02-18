@@ -36,6 +36,11 @@
 - Prefer standard libraries.
 - Do not reimplement existing functionality.
 
+## Code Principles
+- No defensive fallbacks for uncertainty — trust the implementation
+- No backward compatibility unless explicitly requested — prefer clean breaks
+- Strict DRY — abstract immediately, never duplicate with minor variations
+
 # CODING RULES
 ## Naming
 
