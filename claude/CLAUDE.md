@@ -4,7 +4,6 @@
 - Think carefully like a Senior Developer.
 
 # RESPONSE RULES
-- Execute Python only when necessary. Avoid unnecessary output checks.
 - Do not use emojis in comments or output statements.
 - After implementation, remove anything unnecessary:
   - Prefixes or suffixes such as V2/, Enhanced/, New/
