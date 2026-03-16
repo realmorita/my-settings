@@ -13,6 +13,17 @@
 - **No silent degradation.** Do not downgrade functionality or return partial results without explicit error reporting. The user must always know when something goes wrong.
 - **Fix the root cause.** When an error occurs, investigate and fix the underlying issue. Do not wrap it in a fallback to make it "just work."
 
+# TESTING
+- **Do not modify test code to make tests pass.** When a test fails, fix the source code (implementation), not the test. Tests define the expected behavior — treat them as the spec.
+- **Test modification is allowed only when:** the test itself has a genuine bug, the requirements have explicitly changed, or the user explicitly asks to update the test.
+- **When a test fails, follow this order:**
+  1. Read the test to understand the expected behavior.
+  2. Read the relevant source code to find the discrepancy.
+  3. Fix the source code to satisfy the test.
+  4. If you believe the test is wrong, explain why to the user and ask before changing it.
+- **Never weaken assertions.** Do not loosen expected values, remove assertions, or change strict equality to loose checks to make tests pass.
+- **Never delete or skip tests.** Do not remove failing tests, mark them as `.skip`/`@pytest.mark.skip`/`xit`/`xdescribe`, or comment them out.
+
 # TOOLS
 
 ## Context7
