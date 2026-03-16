@@ -5,7 +5,7 @@
 
 # RESPONSE RULES
 - Do not use emojis in comments or output statements.
-- After implementation, use simplify skill to refactor and clean up the code.
+- After implementation, use code-simplifier agent to refactor and clean up the code.
 
 # FORBIDDEN PATTERNS
 - **No fallbacks.** Do not add fallback logic, default values, or silent error recovery to mask failures. If something fails, it must fail visibly. Never use try/catch to swallow errors, empty catch blocks, optional chaining as a band-aid, or `|| defaultValue` patterns to hide bugs.
